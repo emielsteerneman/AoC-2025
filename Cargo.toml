@@ -1,0 +1,4 @@
+resolver = "2"
+
+[workspace]
+members = ["solutions"]
