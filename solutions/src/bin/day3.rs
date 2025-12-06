@@ -1,5 +1,5 @@
 fn main() {
-    println!("Day 1");
+    println!("Day 3");
 
     let content = std::fs::read_to_string("./inputs/day3.txt").unwrap();
     let lines = content.split("\n");

@@ -1,9 +1,9 @@
 use std::fs;
 
-fn main() -> Result<(), Box<dyn std::error::Error>> {
+fn main() {
     println!("Day 1");
 
-    let content = fs::read_to_string("./inputs/day1.txt")?;
+    let content = fs::read_to_string("./inputs/day1.txt").unwrap();
     let lines = content.split("\n");
 
     let (_, p1, p2) = lines.into_iter().fold((50, 0, 0), |(dial, p1, p2), i| {
@@ -20,8 +20,6 @@ fn main() -> Result<(), Box<dyn std::error::Error>> {
 
     println!("Part 1: {p1}");
     println!("Part 2: {p2}");
-
-    Ok(())
 }
 
 fn to_n(s: &str) -> i32 {

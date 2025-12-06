@@ -1,9 +1,9 @@
 static PRIMES: [usize; 4] = [3, 5, 7, 11];
 
-fn main() -> Result<(), Box<dyn std::error::Error>> {
+fn main() {
     println!("Day 2");
 
-    let content = std::fs::read_to_string("./inputs/day2.txt")?;
+    let content = std::fs::read_to_string("./inputs/day2.txt").unwrap();
     let ranges = content.split(",").collect::<Vec<&str>>();
 
     let mut durations = Vec::with_capacity(1000);
@@ -22,8 +22,6 @@ fn main() -> Result<(), Box<dyn std::error::Error>> {
 
     println!("Part 1: {}    Part 2: {}", answer.0, answer.1);
     println!("Average = {:.2}ms", avg_ms);
-
-    Ok(())
 }
 
 fn run(ranges: &Vec<&str>) -> Result<(i64, i64), Box<dyn std::error::Error>> {
